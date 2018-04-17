@@ -1,0 +1,31 @@
+{
+  "name": "firebase-functions-unittest-cd",
+  "version": "1.0.0",
+  "description": "How to setup, test, and continuously deploy Firebase Cloud Function v1.0",
+  "main": "index.js",
+  "scripts": {
+    "firebase:login": "npm run firebase -- login --no-localhost",
+    "firebase:logout": "npm run firebase -- logout",
+    "firebase:init:funcs": "npm run firebase -- init functions",
+    "firebase:install:funcs": "npm --prefix ./functions install",
+    "firebase:test:funcs": "npm --prefix ./functions test",
+    "firebase:citoken": "npm run firebase -- login:ci --no-localhost",
+    "firebase:cideploy:funcs": "npm run firebase -- deploy -P $PROJECT_ID --token $FIREBASE_TOKEN --only functions",
+    "test": "npm run firebase:test:funcs",
+    "postinstall": "npm run firebase:install:funcs",
+    "firebase": "./node_modules/.bin/firebase"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jeremylorino@github.com/jeremylorino/firebase-functions-unittest-cd.git"
+  },
+  "author": "Jeremy Lorino <jeremylorino@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremylorino/firebase-functions-unittest-cd/issues"
+  },
+  "homepage": "https://github.com/jeremylorino/firebase-functions-unittest-cd#readme",
+  "dependencies": {
+    "firebase-tools": "latest"
+  }
+}
