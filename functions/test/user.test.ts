@@ -40,7 +40,6 @@ describe('FirebaseAuthUser', () => {
 
       const user = await userId.get();
       should(user.data()).have.properties({
-        // id: userId.id,
         email: userInfo.email,
         phone: userInfo.phoneNumber || '',
         displayName: userInfo.displayName,
@@ -48,7 +47,6 @@ describe('FirebaseAuthUser', () => {
 
       const uac = await uacId.get();
       should(uac.data()).have.properties({
-        // id: uacId.id,
         permissions: {}
       });
     });
