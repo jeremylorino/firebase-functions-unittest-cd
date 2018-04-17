@@ -10,6 +10,7 @@
     "firebase:install:funcs": "npm --prefix ./functions install",
     "firebase:test:funcs": "npm --prefix ./functions test",
     "firebase:citoken": "npm run firebase -- login:ci --no-localhost",
+    "prefirebase:cideploy:funcs": "npm run firebase:install:funcs",
     "firebase:cideploy:funcs": "npm run firebase -- deploy -P $PROJECT_ID --token $FIREBASE_TOKEN --only functions",
     "test": "npm run firebase:test:funcs",
     "postinstall": "npm run firebase:install:funcs",

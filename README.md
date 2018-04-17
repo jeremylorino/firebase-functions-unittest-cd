@@ -22,6 +22,31 @@ and looking at [the documentation][functions_docs].
 
         npm install
 
+
+### Obtain service account credentials
+
+  * Go to API Manager -> Credentials
+  * Click "New Credentials", and create a service account or [click here](https://console.cloud.google.com/project/_/apiui/credential/serviceaccount)
+  * Download the JSON for this service account, and set the `GOOGLE_APPLICATION_CREDENTIALS`
+  environment variable to point to the file containing the JSON credentials.
+
+  Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable:
+
+  Linux:
+
+    export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service_account_file.json
+
+  Windows:
+
+    set GOOGLE_APPLICATION_CREDENTIALS=/path/to/service_account_file.json
+
+  Windows (PowerShell):
+
+    $env:GOOGLE_APPLICATION_CREDENTIALS="/path/to/service_account_file.json"
+
+  Read more about [Google Cloud Platform Authentication][gcp_auth].
+
+
 ### Authenticate the [Firebase CLI][firebase_cli_reference]
 
   ```
@@ -97,36 +122,15 @@ and looking at [the documentation][functions_docs].
 
   ```
   ? Do you want to use TSLint to catch probable bugs and enforce style? Yes
-  ✔  Wrote functions/package.json
-  ✔  Wrote functions/tslint.json
-  ✔  Wrote functions/tsconfig.json
-  ✔  Wrote functions/src/index.ts
+  ? File functions/package.json already exists. Overwrite? No
+  i  Skipping write of functions/package.json
+  ? File functions/tslint.json already exists. Overwrite? No
+  ? File functions/tsconfig.json already exists. Overwrite? No
+  i  Skipping write of functions/tslint.json
+  i  Skipping write of functions/tsconfig.json
+  ? File functions/src/index.ts already exists. Overwrite? No
+  i  Skipping write of functions/src/index.ts
   ? Do you want to install dependencies with npm now? Yes
-
-  > grpc@1.10.1 install /home/ubuntu/workspace/firebase-functions-unittest-cd/functions/node_modules/grpc
-  > node-pre-gyp install --fallback-to-build --library=static_library
-
-  [grpc] Success: "/home/ubuntu/workspace/firebase-functions-unittest-cd/functions/node_modules/grpc/src/node/extension_binary/node-v57-linux-x64-glibc/grpc_node.node" is installed via remote
-
-  > protobufjs@6.8.6 postinstall /home/ubuntu/workspace/firebase-functions-unittest-cd/functions/node_modules/google-gax/node_modules/protobufjs
-  > node scripts/postinstall
-
-
-  > protobufjs@6.8.6 postinstall /home/ubuntu/workspace/firebase-functions-unittest-cd/functions/node_modules/google-proto-files/node_modules/protobufjs
-  > node scripts/postinstall
-
-
-  > firebase-functions@1.0.1 postinstall /home/ubuntu/workspace/firebase-functions-unittest-cd/functions/node_modules/firebase-functions
-  > node ./upgrade-warning
-
-
-  ======== WARNING! ========
-
-  This upgrade of firebase-functions contains breaking changes if you are upgrading from a version below v1.0.0.
-
-  To see a complete list of these breaking changes, please go to:
-
-  https://firebase.google.com/docs/functions/beta-v1-diff
 
   npm notice created a lockfile as package-lock.json. You should commit this file.
   added 570 packages from 469 contributors in 29.528s
@@ -136,29 +140,6 @@ and looking at [the documentation][functions_docs].
 
   ✔  Firebase initialization complete!
   ```
-
-### Obtain service account credentials
-
-  * Go to API Manager -> Credentials
-  * Click "New Credentials", and create a service account or [click here](https://console.cloud.google.com/project/_/apiui/credential/serviceaccount)
-  * Download the JSON for this service account, and set the `GOOGLE_APPLICATION_CREDENTIALS`
-  environment variable to point to the file containing the JSON credentials.
-
-  Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable:
-
-  Linux:
-
-    export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service_account_file.json
-
-  Windows:
-
-    set GOOGLE_APPLICATION_CREDENTIALS=/path/to/service_account_file.json
-
-  Windows (PowerShell):
-
-    $env:GOOGLE_APPLICATION_CREDENTIALS="/path/to/service_account_file.json"
-
-  Read more about [Google Cloud Platform Authentication][gcp_auth].
 
 
 
