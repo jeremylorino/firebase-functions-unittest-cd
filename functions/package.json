@@ -15,8 +15,8 @@
   "main": "lib/index.js",
   "dependencies": {
     "@firebase/firestore-types": "^0.2.2",
-    "@google-cloud/pubsub": "^0.18.0",
-    "firebase-admin": "~5.12.0",
+    "@google-cloud/pubsub": "^0.20.0",
+    "firebase-admin": "~5.12.1",
     "firebase-functions": "^1.0.1"
   },
   "devDependencies": {
