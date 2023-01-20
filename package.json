@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/jeremylorino/firebase-functions-unittest-cd#readme",
   "dependencies": {
-    "firebase-tools": "latest"
+    "firebase-tools": "11.21.0"
   }
 }
